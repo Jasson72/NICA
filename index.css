@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.utama {
+    font-size: 34px;
+    font-weight: 400;
+    padding: 10px;
+}
+
+.tombol {
+    position: relative;
+    left: 70px;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: green;
+    color: #fff;
+    border-radius: 10px;
+    width: 100px;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.tombol:hover {
+    background-color: rgba(0, 128, 0, 0.732);
+}
+
+.box {
+    display: none;
+    transform: translateX(-100%);
+    opacity: 0; 
+    animation: slideIn 0.5s ease-out forwards;
+    position: relative;
+    bottom: 680px; 
+    padding: 20px;
+    border-radius: 8px;
+    width: auto;
+    max-width: 600px; 
+    margin: 20px auto; 
+    transition: max-height 0.5s ease; 
+}
+
+.box.active {
+    display: block; 
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.judul-box {
+    font-size: 34px;
+    margin-bottom: 20px;
+    padding: 20px;
+    position: relative;
+    right: 17px;
+}
+
+.tombol1 {
+    position: relative;
+    top: 10px;
+    left: 210px;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: green;
+    color: #fff;
+    border-radius: 10px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+@media (max-width: 576px) {
+    .box {
+        position: relative;
+        left: 0px;
+        bottom: 800px;
+    }
+    .tombol1 {
+        position: relative;
+        left: 130px;
+        top: 15px;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
